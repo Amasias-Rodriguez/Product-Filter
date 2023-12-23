@@ -51,3 +51,16 @@ let products = {
     ],
   };
   
+
+  for(let i of products.data){
+    let card = document.createElement("div");
+    card.classList.add("card", "i.category", "hide");
+    let imgContainer = document.createElement("div");
+    imgContainer.classList.add("image-container");
+    let image = document.createElement("img");
+    image.setAttribute("src", i.image);
+    imgContainer.appendChild(image);
+    card.appendChild(imgContainer);
+
+    document.getElementById("product").appendChild(card);
+  }
